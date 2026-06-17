@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHCC Digital Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+
+    <main>
+        <section class="container">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search-input"
+                    class="search-input"
+                    placeholder="Search applications..."
+                    aria-label="Search applications">
+
+                <button class="search-button" type="button" aria-label="Search">
+                    Search
+                </button>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>Quick Access</h2>
+                    <p>Your frequently used systems</p>
+                </div>
+            </div>
+
+            <div id="favorite-container" class="grid"></div>
+        </section>
+
+        <section class="container">
+            <div class="section-header">
+                <h2>Latest Announcements</h2>
+            </div>
+
+            <div id="announcement-container"></div>
+        </section>
+
+        <section class="container">
+            <div class="section-header">
+                <h2>System Health Overview</h2>
+            </div>
+
+            <div id="status-summary"></div>
+        </section>
+    </main>
+
+    <div id="branch-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="branch-title">
+        <div class="modal-content">
+            <h2 id="branch-title">Select Branch</h2>
+            <p class="modal-subtitle">Choose your location</p>
+            <div id="branch-list"></div>
+            <button id="close-modal" type="button">Close</button>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/component-loader.js"></script>
+    <script src="js/settings-loader.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/datetime.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/system-loader.js"></script>
+    <script src="js/announcement-loader.js"></script>
+    <script src="js/status-loader.js"></script>
+</body>
+
+</html>
